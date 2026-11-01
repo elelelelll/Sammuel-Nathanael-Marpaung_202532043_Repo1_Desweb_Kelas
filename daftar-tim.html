@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi Tim | Arena Kampus Cup</title>
+</head>
+<body>
+  <header>
+    <h1>Registrasi Tim</h1>
+    <p>Isi data tim dan kapten untuk mengikuti turnamen</p>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="jadwal.html">Jadwal &amp; Klasemen</a></li>
+        <li><a href="peraturan.html">Peraturan</a></li>
+        <li><a href="daftar-tim.html">Registrasi Tim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formulir Registrasi Tim</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data Tim</legend>
+          <p>
+            <label for="nama-tim">Nama Tim:</label>
+            <input type="text" id="nama-tim" name="nama_tim" minlength="3" maxlength="30" required>
+          </p>
+          <p>
+            <label for="asal">Asal Kampus:</label>
+            <input type="text" id="asal" name="asal" required>
+          </p>
+          <p>
+            <label for="divisi">Divisi:</label>
+            <select id="divisi" name="divisi" required>
+              <option value="">-- Pilih divisi --</option>
+              <option value="putra">Putra</option>
+              <option value="putri">Putri</option>
+              <option value="campuran">Campuran</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Data Kapten</legend>
+          <p>
+            <label for="kapten">Nama Kapten:</label>
+            <input type="text" id="kapten" name="kapten" required>
+          </p>
+          <p>
+            <label for="ign">ID Game (IGN):</label>
+            <input type="text" id="ign" name="ign" required>
+          </p>
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </p>
+          <p>
+            <label for="wa">Nomor WhatsApp:</label>
+            <input type="tel" id="wa" name="wa" pattern="08[0-9]{8,12}" placeholder="08xxxxxxxxxx" required>
+          </p>
+          <p>
+            <label for="pemain">Jumlah Pemain (termasuk cadangan):</label>
+            <input type="number" id="pemain" name="pemain" min="5" max="6" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferensi</legend>
+          <p>Sesi Bertanding:</p>
+          <p>
+            <input type="radio" id="sesi-pagi" name="sesi" value="pagi" required>
+            <label for="sesi-pagi">Pagi</label>
+            <input type="radio" id="sesi-siang" name="sesi" value="siang">
+            <label for="sesi-siang">Siang</label>
+          </p>
+          <p>Peran yang Dimainkan Kapten:</p>
+          <p>
+            <input type="checkbox" id="role-tank" name="role" value="tank">
+            <label for="role-tank">Tank</label>
+            <input type="checkbox" id="role-mage" name="role" value="mage">
+            <label for="role-mage">Mage</label>
+            <input type="checkbox" id="role-marksman" name="role" value="marksman">
+            <label for="role-marksman">Marksman</label>
+          </p>
+          <p>
+            <label for="catatan">Catatan untuk Panitia:</label><br>
+            <textarea id="catatan" name="catatan" rows="4" cols="40" maxlength="250"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="setuju" name="setuju" required>
+          <label for="setuju">Kami telah membaca <a href="peraturan.html">peraturan turnamen</a> dan bersedia mematuhinya.</label>
+        </p>
+        <p>
+          <button type="submit">Kirim Registrasi</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Arena Kampus Cup. Situs ini tidak berafiliasi dengan Moonton.</p>
+    <p><small>Praktikum 1 Desain Web &ndash; HTML5 Fundamentals &amp; Semantic Form.</small></p>
+  </footer>
+</body>
+</html>
